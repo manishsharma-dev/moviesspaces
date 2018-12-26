@@ -1,7 +1,14 @@
 <app-header></app-header>
+
 <mat-sidenav-container class="example-container" >
-  <mat-sidenav #sidenav mode="side" [(opened)]="opened">
-    Sidenav content
+  <mat-sidenav #sidenav mode="side" [(opened)]="opened">    
+      <ul class="menuList">
+        <li><a href="javascript:void(0)"
+               routerLink="/{{Menu.Route}}"
+               [routerLinkActive]="['router-link-active']" > dashboard</li>
+        <li>Category</li>
+        <li>Genre</li>
+      </ul>
   </mat-sidenav>
 
   <mat-sidenav-content>    
@@ -9,10 +16,10 @@
       <i class="material-icons" title="{{toggletitle}}">
       list
       </i></button>
-    </p>
-    
-  </mat-sidenav-content>
+    </p>    
+    <router-outlet></router-outlet>  
+  </mat-sidenav-content>    
 </mat-sidenav-container>
-  <router-outlet></router-outlet>
+  
 
 

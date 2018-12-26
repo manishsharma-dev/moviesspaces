@@ -9,7 +9,7 @@ import { from } from 'rxjs';
 @NgModule({
   declarations: [
     AdminComponent,
-    HeaderComponent,
+    HeaderComponent
   ],
   imports: [
     adminRoutingModule,

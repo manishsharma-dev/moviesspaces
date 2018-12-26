@@ -9,7 +9,9 @@ export class AdminComponent implements OnInit {
   events: string[] = [];
   opened: boolean=true;
   toggletitle :string ="close menu";
-  constructor() { }
+  constructor() {
+    console.log("admin called");
+   }
 
   ngOnInit() {
   }
