@@ -11,6 +11,21 @@ const routes: Routes = [
             },
             {
                 path:'dashboard', loadChildren:'./dashboard/dashboard.module#dashboardModule'
+            },
+            {
+                path:'category', loadChildren:'./category/category.module#categoryModule'
+            },
+            {
+                path:'genre', loadChildren:'./genre/genre.module#genreModule'
+            },
+            {
+                path:'users', loadChildren:'./users/users.module#usersModule'
+            },
+            {
+                path:'login', loadChildren:'./admin-login/admin-login.module#adminLoginModule'
+            },
+            {
+                path:'table-manager', loadChildren:'./table-manager/table-manager.module#tableManagerModule'
             }
         ]
     }

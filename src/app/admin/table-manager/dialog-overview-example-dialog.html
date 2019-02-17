@@ -1,0 +1,100 @@
+<h1 mat-dialog-title>Columns Details</h1>
+<div mat-dialog-content>
+  
+    <form [formGroup]="ColumnForm" (ngSubmit)="onSubmit(ColumnForm)">  
+            <div class="row">
+                    <label class="col-12 col-sm-12 col-md-6 col-xl-6 labelName" >
+                        RECID
+                    </label>
+                    <div class="col-12 col-sm-12 col-md-6 col-xl-6" >
+                        <mat-form-field>
+                        <input matInput placeholder="RECID" formControlName="RECID" >
+                        </mat-form-field>
+                    </div>          
+                </div>
+
+                <div class="row">
+                        <label class="col-12 col-sm-12 col-md-6 col-xl-6 labelName" >
+                            RECVERSION
+                        </label>
+                        <div class="col-12 col-sm-12 col-md-6 col-xl-6" >
+                            <mat-form-field>
+                            <input matInput placeholder="RECVERSION" formControlName="RECVERSION" >
+                            </mat-form-field>
+                        </div>          
+                    </div>
+        <div class="row">
+            <label class="col-12 col-sm-12 col-md-6 col-xl-6 labelName" >
+                Column Name
+            </label>
+            <div class="col-12 col-sm-12 col-md-6 col-xl-6" >
+                <mat-form-field>
+                <input matInput placeholder="Column name" formControlName="columnName" >
+                </mat-form-field>
+            </div>          
+        </div>  
+        <div class="row">
+            <label class="col-12 col-sm-12 col-md-6 col-xl-6 labelName" >
+                Label
+            </label>
+            <div class="col-12 col-sm-12 col-md-6 col-xl-6" >
+                <mat-form-field>
+                <input matInput placeholder="Label" formControlName="Label" >
+                </mat-form-field>
+            </div>          
+        </div>   
+
+        <div class="row">
+            <label class="col-12 col-sm-12 col-md-6 col-xl-6 labelName" >
+                Table visible
+            </label>
+            <div class="col-12 col-sm-12 col-md-6 col-xl-6" >                
+                    <mat-checkbox  formControlName="tableVisible"></mat-checkbox>                
+            </div>          
+        </div>
+
+        <div class="row">
+            <label class="col-12 col-sm-12 col-md-6 col-xl-6 labelName" >
+                Filter
+            </label>
+            <div class="col-12 col-sm-12 col-md-6 col-xl-6" >                
+                    <mat-checkbox formControlName="isFilter"></mat-checkbox>                
+            </div>          
+        </div> 
+
+        <div class="row">
+            <label class="col-12 col-sm-12 col-md-6 col-xl-6 labelName" >
+                Filter Sequence
+            </label>
+            <div class="col-12 col-sm-12 col-md-6 col-xl-6" >
+                <mat-form-field>
+                <input matInput placeholder="Filter Sequence" formControlName="filterSequence" >
+                </mat-form-field>
+            </div>          
+        </div> 
+        <div class="row">
+            <label class="col-12 col-sm-12 col-md-6 col-xl-6 labelName" >
+               Lookup
+            </label>
+            <div class="col-12 col-sm-12 col-md-6 col-xl-6" >                
+                    <mat-checkbox formControlName="isLookUp"></mat-checkbox>                
+            </div>          
+        </div>
+        <div class="row">
+            <label class="col-12 col-sm-12 col-md-6 col-xl-6 labelName" >
+                Lookup Sequence
+            </label>
+            <div class="col-12 col-sm-12 col-md-6 col-xl-6" >
+                <mat-form-field>
+                <input matInput placeholder="Filter Sequence" formControlName="lookUpSequence" >
+                </mat-form-field>
+            </div>          
+        </div> 
+        <div >
+                <button type="submit" mat-raised-button color="primary" >Submit</button>
+              </div>   
+    </form>     
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">No Thanks</button> 
+</div>

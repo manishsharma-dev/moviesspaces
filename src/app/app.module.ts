@@ -3,9 +3,8 @@ import {CommonModule} from '@angular/common';
 import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import {BrowserAnimationsModule,NoopAnimationsModule } from '@angular/platform-browser/animations';
-
+import { HttpClientModule } from '@angular/common/http';
 @NgModule({
   declarations: [
     AppComponent
@@ -16,7 +15,8 @@ import {BrowserAnimationsModule,NoopAnimationsModule } from '@angular/platform-b
     BrowserModule,
     BrowserAnimationsModule,
     NoopAnimationsModule,
-    NgbModule.forRoot()
+    HttpClientModule
+    //,NgbModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

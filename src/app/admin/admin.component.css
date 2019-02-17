@@ -1,3 +1,30 @@
 .menuList{
     list-style-type: none;
 }
+.example-container{
+    height: 100%
+}
+a.router-link-active {
+    background: #417bfe;
+    color: #fff;
+}
+.example-container .menuList{
+    margin: 0px;
+    padding: 0px;
+  }
+  .example-container .menuList li{
+    padding-bottom: 5px;
+    padding-top: 5px;
+    background-color: #673ab7;
+    text-transform: capitalize;
+
+  }
+  .example-container .menuList li a{
+     text-decoration: none;
+     padding: 0px 10px;
+     color: #fff;
+     padding: 5px;
+  }
+  .example-container .menuList li:hover{
+      background-color: #417bfe;
+  }

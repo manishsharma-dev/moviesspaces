@@ -40,7 +40,7 @@ import {
   MatTooltipModule,
   MatTreeModule
 } from '@angular/material';
-
+import { NgxMatSelectSearchModule } from 'ngx-mat-select-search';
 @NgModule({
   exports: [
     CdkTableModule,
@@ -82,7 +82,8 @@ import {
     MatTooltipModule,
     MatTreeModule,
     ScrollingModule,
-    MatChipsModule
+    MatChipsModule,
+    NgxMatSelectSearchModule
   ]
 })
 export class materialShareModule { }

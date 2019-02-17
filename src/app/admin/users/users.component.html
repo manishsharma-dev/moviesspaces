@@ -1,0 +1,84 @@
+
+<mat-toolbar>Users</mat-toolbar>
+<mat-card>  
+  <form [formGroup]="myForm" (ngSubmit)="onSubmit(myForm)">
+      <mat-form-field class="example-full-width">
+          <input matInput formControlName="firstName" placeholder="First name">
+        </mat-form-field>
+        <mat-form-field class="example-full-width">
+            <input matInput formControlName="lastName" placeholder="Last name">
+          </mat-form-field>
+        <mat-form-field class="example-full-width">
+            <input matInput formControlName="email" placeholder="Your email">
+          </mat-form-field>
+          <mat-form-field>
+              <input matInput [matDatepicker]="picker" formControlName="dob" placeholder="Date of Birth">
+              <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+              <mat-datepicker #picker></mat-datepicker>
+            </mat-form-field>
+            <div>
+            <mat-radio-group formControlName="gender">
+                <mat-radio-button value="1">Male</mat-radio-button>
+                <mat-radio-button value="2">Female</mat-radio-button>
+              </mat-radio-group>  
+            </div>
+            <div class="center-align">
+                  <button type="submit" mat-raised-button color="primary">Submit</button>
+                </div>
+  
+  </form>
+</mat-card>
+
+<mat-form-field>
+    <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Search Users">    
+</mat-form-field>
+
+<div class="example-container mat-elevation-z8">
+    <table mat-table [dataSource]="dataSource" matSort>
+  
+      <!-- Position Column -->
+      <ng-container matColumnDef="RECID">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> RECID </th>
+        <td mat-cell *matCellDef="let element"> {{element.RECID}} </td>
+      </ng-container>
+  
+      <!-- Name Column -->
+      <ng-container matColumnDef="RECVERSION">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> RECVERSION </th>
+        <td mat-cell *matCellDef="let element"> {{element.RECVERSION}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="FIRSTNAME">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> FIRSTNAME </th>
+        <td mat-cell *matCellDef="let element"> {{element.FIRSTNAME}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="LASTNAME">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> LASTNAME </th>
+        <td mat-cell *matCellDef="let element"> {{element.LASTNAME}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="DOB">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Date of Birth </th>
+        <td mat-cell *matCellDef="let element"> {{element.DOB}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="GENDER">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> GENDER </th>
+        <td mat-cell *matCellDef="let element"> {{element.GENDER}} </td>
+      </ng-container>
+      <ng-container matColumnDef="GENDERDESCRIPTION">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> GENDER DESCRIPTION </th>
+        <td mat-cell *matCellDef="let element"> {{element.GENDERDESCRIPTION}} </td>
+      </ng-container>
+      <ng-container matColumnDef="Email">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> Email </th>
+          <td mat-cell *matCellDef="let element"> {{element.Email}} </td>
+        </ng-container>
+  
+      <tr mat-header-row *matHeaderRowDef="displayedColumns; sticky: true"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+
+    <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]"></mat-paginator>
+  </div>

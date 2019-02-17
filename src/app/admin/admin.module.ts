@@ -5,12 +5,11 @@ import { HeaderComponent } from './header/header.component';
 import { materialShareModule } from '../../shared/materialshare.module';
 
 import { from } from 'rxjs';
- 
 @NgModule({
   declarations: [
     AdminComponent,
     HeaderComponent
-  ],
+    ],
   imports: [
     adminRoutingModule,
     materialShareModule

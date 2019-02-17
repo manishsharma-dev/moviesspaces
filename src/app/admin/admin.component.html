@@ -3,21 +3,53 @@
 <mat-sidenav-container class="example-container" >
   <mat-sidenav #sidenav mode="side" [(opened)]="opened">    
       <ul class="menuList">
-        <li><a href="javascript:void(0)"
-               routerLink="/{{Menu.Route}}"
-               [routerLinkActive]="['router-link-active']" > dashboard</li>
-        <li>Category</li>
-        <li>Genre</li>
+        <li>
+          <a href="javascript:void(0)"
+               routerLink="/admin/dashboard"
+               [routerLinkActive]="['router-link-active']" > dashboard
+          </a>
+              </li>
+              <li>          
+                <a href="javascript:void(0)"
+                  routerLink="/admin/table-manager"
+                  [routerLinkActive]="['router-link-active']" > table-manager
+                </a>
+              </li>
+              <li>          
+                  <a href="javascript:void(0)"
+                    routerLink="/admin/users"
+                    [routerLinkActive]="['router-link-active']" > Users
+                  </a>
+                </li>
+        <li>          
+          <a href="javascript:void(0)"
+            routerLink="/admin/category"
+            [routerLinkActive]="['router-link-active']" > Category
+          </a>
+        </li>
+        <!-- <li>
+          <a href="javascript:void(0)"
+            routerLink="/admin/genre"
+            [routerLinkActive]="['router-link-active']" > Genre
+          </a>
+        </li> -->
+        <li>
+          <a href="javascript:void(0)"
+            routerLink="/admin/login"
+            [routerLinkActive]="['router-link-active']" > Login
+          </a>
+        </li>
       </ul>
   </mat-sidenav>
-
-  <mat-sidenav-content>    
-    <p><button mat-button (click)="sidenav.toggle();toggleclicked()">
+  <mat-sidenav-content>
+    <div class="col-sm-12 bodyPart">
+    <button mat-button (click)="sidenav.toggle();toggleclicked()">
       <i class="material-icons" title="{{toggletitle}}">
       list
-      </i></button>
-    </p>    
+      </i>
+    </button> 
     <router-outlet></router-outlet>  
+  </div>
   </mat-sidenav-content>    
 </mat-sidenav-container>
   
